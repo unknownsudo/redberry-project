@@ -1,0 +1,596 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeue.ttc);
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: HelveticaNeue, sans-serif;
+}
+
+.blue-color {
+  background-color: #62a1eb;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.header .header-button {
+  color: #232323;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.header .header-button:first-child {
+  margin-right: 70px;
+  padding-bottom: 10px;
+}
+
+.active-header-button {
+  border-bottom: 3px solid black;
+}
+
+#form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 80px 100px;
+}
+
+.form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-control.error input {
+  border-color: red !important;
+}
+
+.form-control.success input {
+  border-color: green !important;
+}
+
+input {
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 6px;
+  border: 2px solid #8ac0e2;
+  outline: none;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 10px !important;
+}
+
+span {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.full-name-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#names-input {
+  width: 300px;
+}
+
+#names-input input {
+  width: 100%;
+  border: 2px solid #8ac0e2;
+}
+
+#names-input label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#names-input span {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+#email {
+  margin-bottom: 5px;
+}
+
+.mail-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 35px;
+}
+
+#mail-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 35px;
+}
+
+#phone {
+  margin-bottom: 5px;
+}
+
+#phone-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 35px;
+}
+
+.select-style {
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 6px;
+  border: 2px solid #8ac0e2;
+  outline: none;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  background-color: #ebebeb;
+  border: none;
+  width: 100%;
+}
+
+.team-cont {
+  width: 100%;
+}
+
+.team-cont #team {
+  margin-bottom: 5px;
+}
+
+#form .submit-button-container {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.submit-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.submit-button-container .back-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.submit-button-container .back-button a {
+  color: #62a1eb;
+  cursor: pointer;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  border-radius: 6px;
+  margin-top: 100px;
+  font-family: "HelveticaNeue", sans-serif;
+}
+
+.red-circle-logo {
+  margin: 30px 0;
+}
+
+.red-circle-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+#laptop-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 80px 100px;
+}
+
+#laptop-form hr {
+  background-color: #c7c7c7;
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin: 40px 0;
+}
+
+#laptop-brands {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+#laptop-brands #brands {
+  cursor: pointer;
+  margin-top: unset;
+}
+
+.cpu-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0;
+}
+
+.cpu-details #laptop-cpus {
+  width: 200px;
+}
+
+.cpu-details #laptop-cpus #cpus {
+  margin-top: 28px;
+}
+
+.cpu-details .cpu-cores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cpu-details .cpu-cores input {
+  margin-bottom: 5px;
+}
+
+.cpu-details .cpu-thread {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cpu-details .cpu-thread input {
+  margin-bottom: 5px;
+}
+
+.memory-specs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.memory-specs .ram-capacity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  margin-right: 50px;
+}
+
+.memory-specs .ram-capacity input {
+  margin-bottom: 5px;
+}
+
+.memory-specs .ram-type .radio-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+.memory-specs .ram-type .radio-buttons .ssd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 50px;
+}
+
+.memory-specs .ram-type .radio-buttons .ssd input {
+  margin-right: 15px;
+}
+
+.memory-specs .ram-type .radio-buttons .ssd span {
+  font-size: 14px;
+}
+
+.memory-specs .ram-type .radio-buttons .hdd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.memory-specs .ram-type .radio-buttons .hdd input {
+  margin-right: 15px;
+}
+
+.memory-specs .ram-type .radio-buttons .hdd span {
+  font-size: 14px;
+}
+
+.date-and-price-cont {
+  margin-bottom: 40px;
+}
+
+.date-and-price-cont .date-input {
+  width: 300px;
+}
+
+.date-and-price-cont .date-price-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.date-and-price-cont .date-price-inputs .date-input-cont label p {
+  margin-bottom: 10px;
+}
+
+.date-and-price-cont .date-price-inputs .price-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+}
+
+.date-and-price-cont .date-price-inputs .price-input input {
+  margin-bottom: 5px;
+}
+
+.condition-radio-buttons .radio-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.condition-radio-buttons .radio-buttons span {
+  font-size: 12px;
+}
+
+.condition-radio-buttons .radio-buttons .new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 57px;
+}
+
+.condition-radio-buttons .radio-buttons .new input {
+  margin-right: 15px;
+}
+
+.condition-radio-buttons .radio-buttons .used {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.condition-radio-buttons .radio-buttons .used input {
+  margin-right: 15px;
+}
+
+.upload-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.upload-container h3 {
+  color: #62a1eb;
+  font-weight: 100;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 60px 0 0 0;
+}
+
+.upload-container .drag-area {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #f6f6f6;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px dotted #62a1eb;
+}
+
+.upload-container .drag-area #upload-button {
+  background-color: #62a1eb;
+  padding: 10px 10px;
+  font-family: "HelveticaNeue";
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  margin: 70px auto;
+  width: 152px;
+  border-radius: 6px;
+}
+
+.drag-area-active {
+  background-color: wheat !important;
+  -webkit-box-shadow: inset 0 -1px 2rem 5px #62a1eb, 1px 1px 1.5rem 0.8rem rgba(73, 160, 116, 0.7);
+          box-shadow: inset 0 -1px 2rem 5px #62a1eb, 1px 1px 1.5rem 0.8rem rgba(73, 160, 116, 0.7);
+}
+
+.drag-area img {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 0 20px 20px;
+}
+
+.uploaded-image-cont {
+  padding: 0 58px;
+}
+
+.uploaded-image-cont img {
+  border-radius: 10px;
+  width: 300px;
+  height: 260px;
+}
+
+@media only screen and (max-width: 768px) {
+  #form {
+    border-radius: 15px;
+    width: 100%;
+  }
+  .full-name-inputs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .full-name-inputs #names-input {
+    width: 100%;
+  }
+  .full-name-inputs #names-input:first-child {
+    margin-bottom: 35px;
+  }
+  #laptop-brands {
+    width: 100%;
+  }
+  .cpu-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .cpu-details #laptop-cpus {
+    width: 100%;
+  }
+  .cpu-details #laptop-cpus #cpus {
+    margin-top: 0;
+  }
+  .cpu-details > * {
+    margin-bottom: 35px;
+  }
+  .memory-specs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .memory-specs .ram-capacity {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .date-and-price-cont .date-price-inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .date-and-price-cont .date-price-inputs .date-input {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  .date-and-price-cont .date-price-inputs .price-input {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #form {
+    padding: 80px 10px;
+  }
+  #laptop-form {
+    padding: 80px 10px;
+  }
+  .uploaded-image-cont {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=details-page.css.map */

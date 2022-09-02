@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../assets/css/details-page.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="../assets/css/resetCSS.css" rel="stylesheet" type="text/css" />
+    <title>Redberry formValidation</title>
+  </head>
+  <body>
+    <div class="header">
+      <a
+        id="employed-details"
+        class="employed-details header-button active-header-button"
+        >თანამშრომლის ინფო</a
+      >
+      <a id="laptop-details" class="laptop-details header-button"
+        >ლეპტოპის მახასიათებლები</a
+      >
+    </div>
+
+    <form action="#" id="form" autocomplete="off">
+      <div class="full-name-inputs">
+        <div class="names-input form-control" id="names-input">
+          <label for="name">სახელი</label>
+          <input
+            type="text"
+            class="form__input"
+            placeholder="გრიშა"
+            autocomplete="off"
+            name="name"
+            id="name"
+          />
+          <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+        </div>
+        <div class="names-input form-control" id="names-input">
+          <label for="last-name">გვარი</label>
+          <input
+            type="text"
+            class="form__input"
+            placeholder="ბაგრატიონი"
+            autocomplete="off"
+            name="last-name"
+            id="last-name"
+          />
+          <span>მინიმუმ 2 სიმბოლო, ქართული ასოები</span>
+        </div>
+      </div>
+      <div id="team-cont form-control error">
+        <select name="team" id="team" class="form-select-team select-style">
+          <option value="">თიმი</option>
+        </select>
+        <span></span>
+      </div>
+      <div id="position-cont form-control ">
+        <select
+          name="position"
+          id="position"
+          class="form-select-team select-style"
+        >
+          <option value="">პოზიცია</option>
+        </select>
+        <span></span>
+      </div>
+      <div class="mail-input form-control" id="mail-input">
+        <label for="email">მეილი</label>
+        <input
+          type="email"
+          class="form__input"
+          placeholder="grisha666@redberry.ge"
+          autocomplete="off"
+          name="email"
+          id="email"
+        />
+        <span>უნდა მთავრდებოდეს @redberry.ge -ით</span>
+      </div>
+      <div class="phone-input form-control" id="phone-input">
+        <label for="phone">ტელეფონის ნომერი</label>
+        <input
+          type="phone"
+          class="form__input"
+          placeholder="+995 598 00 07 01"
+          autocomplete="off"
+          name="phone"
+          id="phone"
+        />
+        <span>უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</span>
+      </div>
+      <div class="submit-button-container">
+        <button class="submit-button blue-color" id="submit-btn">
+          შემდეგი
+        </button>
+      </div>
+    </form>
+    <div class="red-circle-logo">
+      <img src="../assets/images/red-circle-logo.png" />
+    </div>
+
+    <form action="#" id="laptop-form" autocomplete="off">
+      <div class="upload-container">
+        <div class="drag-area">
+          <h3>
+            ჩააგდე ან ატვირთე <br />
+            ლეპტოპის ფოტო
+          </h3>
+          <span id="upload-button">ატვირთე</span>
+          <input class="upload-input" type="file" hidden />
+        </div>
+        <div class="uploaded-image-cont" id="uploaded-image-cont"></div>
+      </div>
+      <div class="full-name-inputs">
+        <div class="names-input" id="names-input">
+          <label for="name">ლეპტოპის სახელი</label>
+          <input
+            type="text"
+            class="form__input form-control"
+            placeholder="HP"
+            autocomplete="off"
+            name="name"
+            id="name"
+          />
+          <span>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
+        </div>
+        <div id="laptop-brands">
+          <select
+            name="brands"
+            id="brands"
+            class="form-select-team select-style"
+          >
+            <option value="">ლეპტოპის ბრენდი</option>
+          </select>
+        </div>
+      </div>
+      <hr />
+      <div class="cpu-details">
+        <div id="laptop-cpus">
+          <select name="cpus" id="cpus" class="form-select-team select-style">
+            <option value="">CPU</option>
+          </select>
+        </div>
+        <div class="cpu-cores">
+          <label for="cores">CPU-ს ბირთვი</label>
+          <input
+            type="text"
+            class="form__input form-control"
+            placeholder="14"
+            autocomplete="off"
+            name="cores"
+            id="cores"
+          />
+          <span>მხოლოდ ციფრები</span>
+        </div>
+        <div class="cpu-thread">
+          <label for="thread">CPU-ს ნაკადი</label>
+          <input
+            type="text"
+            class="form__input form-control"
+            placeholder="360"
+            autocomplete="off"
+            name="thread"
+            id="thread"
+          />
+          <span>მხოლოდ ციფრები</span>
+        </div>
+      </div>
+      <div class="memory-specs">
+        <div class="ram-capacity">
+          <label for="ram">ლეპტოპის RAM(GB)</label>
+          <input
+            type="text"
+            class="form__input form-control"
+            placeholder="16"
+            autocomplete="off"
+            name="ram"
+            id="ram"
+          />
+          <span>მხოლოდ ციფრები</span>
+        </div>
+        <div class="ram-type" id="radio-group">
+          <div>
+            <label class="radio-label" for="radio1"> მეხსიერების ტიპი </label>
+          </div>
+          <div class="radio-buttons">
+            <div class="ssd">
+              <input
+                type="radio"
+                name="radio"
+                class="form-check-input"
+                id="hdd-radio-button"
+              />
+              <span>SSD</span>
+            </div>
+            <div class="hdd">
+              <input
+                type="radio"
+                name="radio"
+                class="form-check-input"
+                id="hdd-radio-button"
+              /><span>HDD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="date-and-price-cont">
+        <div class="date-price-inputs">
+          <div class="date-input-cont">
+            <label>
+              <p>შეძენის რიცხვი(არჩევითი)</p>
+            </label>
+            <input
+              type="text"
+              class="date-input"
+              placeholder="თთ / დდ / წწწწ"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+            />
+          </div>
+          <div class="price-input">
+            <label>
+              <p>ლეპტოპის ფასი</p>
+            </label>
+            <input
+              type="price"
+              class="form__input form-control"
+              placeholder="0000"
+              autocomplete="off"
+              name="price"
+              id="price"
+            />
+            <span>მხოლოდ ციფრები</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="condition-radio-buttons" id="radio-group">
+        <div>
+          <label class="radio-label" for="radio1">ლეპტოპის მდგომარეობა</label>
+        </div>
+        <div class="radio-buttons">
+          <div class="new">
+            <input
+              type="radio"
+              name="radio"
+              class="form-check-input"
+              id="used-radio-button"
+            />
+            <span>ახალი</span>
+          </div>
+          <div class="used">
+            <input
+              type="radio"
+              name="radio"
+              class="form-check-input"
+              id="used-radio-button"
+            /><span>მეორადი</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="submit-button-container">
+        <div class="back-button">
+          <a id="back-button">უკან</a>
+        </div>
+        <button class="submit-button blue-color" id="submit-btn">
+          დამახსოვრება
+        </button>
+      </div>
+    </form>
+
+    <script src="../assets/scripts/scripts.js"></script>
+    <script src="../assets/scripts/file-upload.js"></script>
+    <script src="../assets/scripts/api.js"></script>
+    <script src="../assets/scripts/validation.js"></script>
+  </body>
+</html>
