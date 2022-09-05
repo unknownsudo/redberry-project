@@ -24,7 +24,7 @@
       >
     </div>
 
-    <form action="#" id="form" autocomplete="off">
+    <form action="#" id="form" method="post" autocomplete="off">
       <div class="full-name-inputs">
         <div class="names-input form-control" id="names-input">
           <label for="name">სახელი</label>
@@ -98,10 +98,10 @@
       </div>
     </form>
     <div class="red-circle-logo">
-      <img src="../assets/images/red-circle-logo.png" />
+      <img id="redberry-red-logo" src="../assets/images/red-circle-logo.png" />
     </div>
 
-    <form action="#" id="laptop-form" autocomplete="off">
+    <form action="#" id="laptop-form" method="post" autocomplete="off">
       <div class="upload-container">
         <div class="drag-area">
           <h3>
@@ -109,20 +109,20 @@
             ლეპტოპის ფოტო
           </h3>
           <span id="upload-button">ატვირთე</span>
-          <input class="upload-input" type="file" hidden />
+          <input id="upload-input" class="upload-input" type="file" hidden />
         </div>
         <div class="uploaded-image-cont" id="uploaded-image-cont"></div>
       </div>
       <div class="full-name-inputs">
         <div class="names-input" id="names-input">
-          <label for="name">ლეპტოპის სახელი</label>
+          <label for="laptop-name">ლეპტოპის სახელი</label>
           <input
             type="text"
             class="form__input form-control"
             placeholder="HP"
             autocomplete="off"
-            name="name"
-            id="name"
+            name="laptop-name"
+            id="laptop-name"
           />
           <span>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</span>
         </div>
@@ -134,6 +134,7 @@
           >
             <option value="">ლეპტოპის ბრენდი</option>
           </select>
+          <span></span>
         </div>
       </div>
       <hr />
@@ -142,6 +143,7 @@
           <select name="cpus" id="cpus" class="form-select-team select-style">
             <option value="">CPU</option>
           </select>
+          <span></span>
         </div>
         <div class="cpu-cores">
           <label for="cores">CPU-ს ბირთვი</label>
@@ -169,7 +171,7 @@
         </div>
       </div>
       <div class="memory-specs">
-        <div class="ram-capacity">
+        <div class="ram-capacity" id="ram-capacity">
           <label for="ram">ლეპტოპის RAM(GB)</label>
           <input
             type="text"
@@ -182,26 +184,41 @@
           <span>მხოლოდ ციფრები</span>
         </div>
         <div class="ram-type" id="radio-group">
-          <div>
-            <label class="radio-label" for="radio1"> მეხსიერების ტიპი </label>
+          <div class="ram-type-title-cont">
+            <label class="ram-type-title" for="radio1">
+              მეხსიერების ტიპი
+            </label>
+            <svg
+              class="ram-warning-icon"
+              id="ram-warning-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"
+              />
+            </svg>
           </div>
           <div class="radio-buttons">
             <div class="ssd">
               <input
                 type="radio"
-                name="radio"
+                name="ram-type"
                 class="form-check-input"
-                id="hdd-radio-button"
+                id="ssd-radio-button"
               />
-              <span>SSD</span>
+              <p>SSD</p>
+              <span></span>
             </div>
             <div class="hdd">
               <input
                 type="radio"
-                name="radio"
+                name="ram-type"
                 class="form-check-input"
                 id="hdd-radio-button"
-              /><span>HDD</span>
+              />
+              <p>HDD</p>
+              <span></span>
             </div>
           </div>
         </div>
@@ -214,6 +231,7 @@
               <p>შეძენის რიცხვი(არჩევითი)</p>
             </label>
             <input
+              id="date-input"
               type="text"
               class="date-input"
               placeholder="თთ / დდ / წწწწ"
@@ -221,7 +239,7 @@
               onblur="(this.type='text')"
             />
           </div>
-          <div class="price-input">
+          <div class="price-input" id="price-input">
             <label>
               <p>ლეპტოპის ფასი</p>
             </label>
@@ -239,26 +257,39 @@
       </div>
 
       <div class="condition-radio-buttons" id="radio-group">
-        <div>
-          <label class="radio-label" for="radio1">ლეპტოპის მდგომარეობა</label>
+        <div class="condition-radio-buttons-title">
+          <label class="condition-title" for="radio1"
+            >ლეპტოპის მდგომარეობა</label
+          >
+          <svg
+            class="condition-warning-icon"
+            id="condition-warning-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"
+            />
+          </svg>
         </div>
         <div class="radio-buttons">
           <div class="new">
             <input
               type="radio"
-              name="radio"
+              name="condition"
               class="form-check-input"
-              id="used-radio-button"
+              id="new-radio-button"
             />
-            <span>ახალი</span>
+            <p>ახალი</p>
           </div>
           <div class="used">
             <input
               type="radio"
-              name="radio"
+              name="condition"
               class="form-check-input"
               id="used-radio-button"
-            /><span>მეორადი</span>
+            />
+            <p>მეორადი</p>
           </div>
         </div>
       </div>
@@ -276,6 +307,8 @@
     <script src="../assets/scripts/scripts.js"></script>
     <script src="../assets/scripts/file-upload.js"></script>
     <script src="../assets/scripts/api.js"></script>
+    <script src="../assets/scripts/laptop-validation.js"></script>
     <script src="../assets/scripts/validation.js"></script>
+    
   </body>
 </html>

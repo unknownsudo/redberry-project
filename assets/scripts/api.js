@@ -9,7 +9,7 @@ fetch(fetchTeamsApi)
   .then((data) => {
     data.data.forEach((element) => {
       teamSelectOptions.innerHTML += `
-         <option value="${element.name}">${element.name}</option>
+         <option value="${element.id}">${element.name}</option>
         `;
     });
   });
@@ -19,7 +19,7 @@ fetch(fetchPositionApi)
   .then((response) => response.json())
   .then((data) => {
     data.data.forEach((element) => {
-      positionSelectOptions.innerHTML += `<option value="${element.name}">${element.name}</option>`;
+      positionSelectOptions.innerHTML += `<option value="${element.team_id}">${element.name}</option>`;
     });
   });
 
@@ -28,7 +28,7 @@ fetch(fetchBrandsApi)
   .then((response) => response.json())
   .then((data) => {
     data.data.forEach((element) => {
-      laptopBrandSelect.innerHTML += `<option value="${element.name}">${element.name}</option>`;
+      laptopBrandSelect.innerHTML += `<option value="${element.id}">${element.name}</option>`;
     });
   });
 

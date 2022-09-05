@@ -12,6 +12,18 @@ body {
   background-color: #62a1eb;
 }
 
+.ram-warning-icon {
+  fill: #c8cb52;
+  width: 20px;
+  height: 20px;
+}
+
+.condition-warning-icon {
+  fill: #c8cb52;
+  width: 20px;
+  height: 20px;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -72,6 +84,7 @@ span {
 .full-name-inputs {
   display: flex;
   justify-content: space-between;
+  align-items: end;
 }
 
 #names-input {
@@ -189,11 +202,15 @@ span {
   width: 300px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  flex-direction: column;
+  //margin-top: unset;
   #brands {
     cursor: pointer;
     margin-top: unset;
+    margin-bottom: 5px;
+  }
+  span {
+    height: 12px;
   }
 }
 
@@ -223,6 +240,13 @@ span {
   }
 }
 
+.ram-type-title-cont {
+  display: flex;
+  label {
+    margin-right: 10px;
+  }
+}
+
 .memory-specs {
   display: flex;
   .ram-capacity {
@@ -233,6 +257,10 @@ span {
     input {
       margin-bottom: 5px;
     }
+  }
+  #ram-capacity {
+    width: 300px;
+    margin-right: 50px;
   }
   .ram-type {
     .radio-buttons {
@@ -287,10 +315,19 @@ span {
         margin-bottom: 5px;
       }
     }
+    #price-input {
+      width: 300px;
+    }
   }
 }
 
 .condition-radio-buttons {
+  .condition-radio-buttons-title {
+    display: flex;
+    label {
+      margin-right: 10px;
+    }
+  }
   .radio-buttons {
     display: flex;
     span {
@@ -412,6 +449,11 @@ span {
       width: 100%;
       margin-bottom: 35px;
     }
+    #ram-capacity {
+      width: 100%;
+      margin-right: unset;
+      margin-bottom: 35px;
+    }
   }
   .date-and-price-cont {
     .date-price-inputs {
@@ -421,6 +463,13 @@ span {
         width: 100%;
       }
       .price-input {
+        width: 100%;
+      }
+    }
+  }
+  .date-and-price-cont {
+    .date-price-inputs {
+      #price-input {
         width: 100%;
       }
     }
